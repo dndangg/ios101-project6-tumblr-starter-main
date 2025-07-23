@@ -23,6 +23,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 [GIF](https://submissions.us-east-1.linodeobjects.com/ios101/lCfVFz4C.gif)
+![Imgur](https://i.imgur.com/TmnP3fC.gif)
 
 ## Notes
 

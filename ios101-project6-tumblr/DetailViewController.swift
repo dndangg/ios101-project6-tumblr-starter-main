@@ -6,15 +6,40 @@
 //
 
 import UIKit
+import Nuke
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var captionTextView: UITextView!
+    
+    var post: Post?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let post = post else {
+            print("Error: Post was nil in DetailViewController")
+            return
+        }
+
         // Do any additional setup after loading the view.
+        if let photo = post.photos.first {
+            let imageUrl = photo.originalSize.url
+            let request = ImageRequest(url: imageUrl)
+
+            Task {
+                do {
+                    let image = try await ImagePipeline.shared.image(for: request)
+                    imageView.image = image
+                } catch {
+                    print("Failed to load image: \(error)")
+                }
+            }
+        }
+
+        captionTextView.text = post.caption.trimHTMLTags()
     }
-    
 
     /*
     // MARK: - Navigation

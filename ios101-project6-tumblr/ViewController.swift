@@ -16,6 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        title = "Tumblr Feed"
+        navigationController?.navigationBar.prefersLargeTitles = true
         fetchPosts()
 
     }
@@ -77,5 +79,22 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
         session.resume()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail",
+           let cell = sender as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell),
+           let detailVC = segue.destination as? DetailViewController {
+            
+            let selectedPost = posts[indexPath.row]
+            detailVC.post = selectedPost
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }

@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Getting everything look neat and tidy is tedious.
 
 ## License
 

@@ -22,9 +22,11 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-[GIF](https://i.imgur.com/TmnP3fC.gif)
-![Imgur](https://i.imgur.com/TmnP3fC.gif)
-
+[GIF](<img width="389" height="800" alt="image" src="https://github.com/user-attachments/assets/139ad44b-4008-4993-a846-dd518ea787f0" />
+)
+![Imgur](https://i.imgur.com/XYCJ9Rw.gif)
+![Imgur](https://i.imgur.com/ZTZKtaa.gif)
+![Imgur](https://i.imgur.com/oZbPB0d.gif)
 ## Notes
 
 Getting everything look neat and tidy is tedious.
